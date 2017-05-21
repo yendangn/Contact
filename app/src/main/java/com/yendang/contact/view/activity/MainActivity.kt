@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
         contactList = initData()
 
-        rvContactList!!.addItemDecoration(object : RecyclerView.ItemDecoration() {
+        rvContactList?.addItemDecoration(object : RecyclerView.ItemDecoration() {
             override fun getItemOffsets(outRect: Rect?, view: View?, parent: RecyclerView?, state: RecyclerView.State?) {
                 super.getItemOffsets(outRect, view, parent, state)
 
@@ -44,11 +44,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
         })
 
         val layoutManager = LinearLayoutManager(this)
-        rvContactList!!.layoutManager = layoutManager
+        rvContactList?.layoutManager = layoutManager
 
 
         val adapter = MainAdapter(contactList as ArrayList<Contact>, this, this)
-        rvContactList!!.adapter = adapter
+        rvContactList?.adapter = adapter
 
     }
 
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     }
 
     override fun onItemClick(position: Int) {
-        ContactDetailActivity.start(this@MainActivity, contactList!![position])
+        ContactDetailActivity.start(this@MainActivity, contactList?.get(position))
 
     }
 }

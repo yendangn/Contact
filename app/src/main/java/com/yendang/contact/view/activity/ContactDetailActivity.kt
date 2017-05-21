@@ -22,7 +22,7 @@ class ContactDetailActivity : AppCompatActivity() {
 
         private val CONTACT_DATA = "CONTACT_DATA"
 
-        fun start(context: Context, contact: Contact) {
+        fun start(context: Context, contact: Contact?) {
             val intent = Intent(context, ContactDetailActivity::class.java)
             intent.putExtra(CONTACT_DATA, contact)
             context.startActivity(intent)
@@ -47,9 +47,9 @@ class ContactDetailActivity : AppCompatActivity() {
 
     private fun showData() {
 
-        imgProfile!!.setImageResource(contact!!.avatar)
-        tvName!!.text = contact!!.name
-        tvPhone!!.text = contact!!.phoneNumber
+        imgProfile?.setImageResource(contact?.avatar as Int)
+        tvName?.text = contact?.name
+        tvPhone?.text = contact?.phoneNumber
     }
 
 }
