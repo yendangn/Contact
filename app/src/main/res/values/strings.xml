@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Contact</string>
+    <string name="contacts_title">Contacts</string>
+    <string name="title_activity_main4">Main4Activity</string>
+    <string name="mobile_label">Mobile</string>
+    <string name="name_label">Name</string>
 </resources>
