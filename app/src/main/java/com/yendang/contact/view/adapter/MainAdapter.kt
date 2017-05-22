@@ -35,7 +35,7 @@ class MainAdapter(private val data: List<Contact>, private val context: Context,
 
         val contactItem = data.getOrNull(i)
 
-        if (contactItem != null) {
+        contactItem?.let {
             contactViewHolder.tvName.text = contactItem.name
             contactViewHolder.tvPhone.text = contactItem.phoneNumber
             contactViewHolder.imgAvatar.setImageResource(contactItem.avatar)

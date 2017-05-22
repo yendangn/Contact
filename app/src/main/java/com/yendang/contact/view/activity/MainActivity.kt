@@ -36,9 +36,11 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
             override fun getItemOffsets(outRect: Rect?, view: View?, parent: RecyclerView?, state: RecyclerView.State?) {
                 super.getItemOffsets(outRect, view, parent, state)
 
-                outRect!!.left = spacing
-                outRect.right = spacing
-                outRect.top = spacing
+                outRect?.let {
+                    outRect.left = spacing
+                    outRect.right = spacing
+                    outRect.top = spacing
+                }
 
             }
         })
